@@ -1,18 +1,14 @@
 import React, { Component } from "react";
-import { brotliDecompress } from "zlib";
+// import { brotliDecompress } from "zlib";
+// import { throwStatement } from "@babel/types";
 
 class Counter extends Component {
   state = {
-    count: 0
+    value: this.props.value
   };
-
-  //   constructor() {
-  //     super();
-  //     this.handleIncrement = this.handleIncrement.bind(this);
-  //   }
-
   handleIncrement = product => {
-    this.setState({ count: this.state.count + 1 });
+    console.log(product);
+    this.setState({ value: this.state.value + 1 });
   };
 
   render() {
@@ -20,7 +16,7 @@ class Counter extends Component {
       <div>
         <span className={this.getBadgeClasses()}>{this.formatCount()}</span>
         <button
-          onClick={() => this.handleIncrement(product)}
+          onClick={() => this.handleIncrement("product")}
           className="btn btn-secondary btn-sm"
         >
           Increment
