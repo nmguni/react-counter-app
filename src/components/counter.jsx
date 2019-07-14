@@ -1,9 +1,8 @@
 import React, { Component } from "react";
-import { conditionalExpression } from "@babel/types";
+// import { conditionalExpression } from "@babel/types";
 
 class Counter extends Component {
   render() {
-    console.log(this.props);
     return (
       <div>
         <span className={this.getBadgeClasses()}>{this.formatCount()}</span>
@@ -28,6 +27,7 @@ class Counter extends Component {
     classes += this.props.counter.value === 0 ? "warning" : "primary";
     return classes;
   }
+
   formatCount() {
     const { value } = this.props.counter;
     return value === 0 ? "zero" : value;
