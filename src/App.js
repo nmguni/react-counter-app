@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import NavBar from "./components/navbar";
 import "./App.css";
 import Counters from "./components/counters";
-import Counter from "./components/counter";
+// import Counter from "./components/counter";
 
 class App extends Component {
   state = {
@@ -13,16 +13,6 @@ class App extends Component {
       { id: 4, value: 0 }
     ]
   };
-
-  constructor() {
-    super();
-    console.log("app-constrctor");
-  }
-  componentDidMount() {
-    // called after compnent is renderd into dom
-    //ajax call
-    console.log("App - Mounter");
-  }
 
   handleincrement = counter => {
     // 1:45min
